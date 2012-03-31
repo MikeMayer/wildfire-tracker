@@ -18,7 +18,7 @@
 		E74A0CA4152772DC00B06805 /* WFTFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CA3152772DC00B06805 /* WFTFirstViewController.m */; };
 		E74A0CA6152772DC00B06805 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CA5152772DC00B06805 /* first.png */; };
 		E74A0CA8152772DC00B06805 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CA7152772DC00B06805 /* first@2x.png */; };
-		E74A0CAB152772DC00B06805 /* WFTSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CAA152772DC00B06805 /* WFTSecondViewController.m */; };
+		E74A0CAB152772DC00B06805 /* WFTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CAA152772DC00B06805 /* WFTMapViewController.m */; };
 		E74A0CAD152772DC00B06805 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CAC152772DC00B06805 /* second.png */; };
 		E74A0CAF152772DC00B06805 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CAE152772DC00B06805 /* second@2x.png */; };
 		E74A0CB7152772DC00B06805 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A0CB6152772DC00B06805 /* SenTestingKit.framework */; };
@@ -26,6 +26,23 @@
 		E74A0CB9152772DC00B06805 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A0C8C152772DB00B06805 /* Foundation.framework */; };
 		E74A0CC1152772DC00B06805 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CBF152772DC00B06805 /* InfoPlist.strings */; };
 		E74A0CC4152772DC00B06805 /* TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CC3152772DC00B06805 /* TrackerTests.m */; };
+		E74A0CD31527750600B06805 /* WFTLocate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CD21527750600B06805 /* WFTLocate.m */; };
+		E74A0CD51527753800B06805 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A0CD41527753800B06805 /* CoreLocation.framework */; };
+		E74A0CD71527753E00B06805 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A0CD61527753E00B06805 /* Twitter.framework */; };
+		E74A0CD915277BEF00B06805 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A0CD815277BEF00B06805 /* MapKit.framework */; };
+		E74A0CF015277DEC00B06805 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CDB15277DEC00B06805 /* InfoPlist.strings */; };
+		E74A0CF115277DEC00B06805 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CDD15277DEC00B06805 /* MainStoryboard_iPad.storyboard */; };
+		E74A0CF215277DEC00B06805 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CDF15277DEC00B06805 /* MainStoryboard_iPhone.storyboard */; };
+		E74A0CF315277DEC00B06805 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CE115277DEC00B06805 /* first.png */; };
+		E74A0CF415277DEC00B06805 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CE215277DEC00B06805 /* first@2x.png */; };
+		E74A0CF515277DEC00B06805 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CE315277DEC00B06805 /* main.m */; };
+		E74A0CF615277DEC00B06805 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CE415277DEC00B06805 /* second.png */; };
+		E74A0CF715277DEC00B06805 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CE515277DEC00B06805 /* second@2x.png */; };
+		E74A0CF815277DEC00B06805 /* Tracker-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A0CE615277DEC00B06805 /* Tracker-Info.plist */; };
+		E74A0CF915277DEC00B06805 /* WFTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CE915277DEC00B06805 /* WFTAppDelegate.m */; };
+		E74A0CFA15277DEC00B06805 /* WFTFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CEB15277DEC00B06805 /* WFTFirstViewController.m */; };
+		E74A0CFB15277DEC00B06805 /* WFTLocate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CED15277DEC00B06805 /* WFTLocate.m */; };
+		E74A0CFC15277DEC00B06805 /* WFTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A0CEF15277DEC00B06805 /* WFTMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,28 +60,51 @@
 		E74A0C8A152772DB00B06805 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E74A0C8C152772DB00B06805 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E74A0C8E152772DB00B06805 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E74A0C92152772DB00B06805 /* Tracker-Info.plist */ = {isa = PBXFileReference; path = "Tracker-Info.plist"; sourceTree = "<group>"; };
+		E74A0C92152772DB00B06805 /* Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tracker-Info.plist"; sourceTree = "<group>"; };
 		E74A0C94152772DB00B06805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E74A0C96152772DB00B06805 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E74A0C98152772DB00B06805 /* Tracker-Prefix.pch */ = {isa = PBXFileReference; path = "Tracker-Prefix.pch"; sourceTree = "<group>"; };
-		E74A0C99152772DB00B06805 /* WFTAppDelegate.h */ = {isa = PBXFileReference; path = WFTAppDelegate.h; sourceTree = "<group>"; };
+		E74A0C98152772DB00B06805 /* Tracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tracker-Prefix.pch"; sourceTree = "<group>"; };
+		E74A0C99152772DB00B06805 /* WFTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFTAppDelegate.h; sourceTree = "<group>"; };
 		E74A0C9A152772DC00B06805 /* WFTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFTAppDelegate.m; sourceTree = "<group>"; };
 		E74A0C9D152772DC00B06805 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E74A0CA0152772DC00B06805 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E74A0CA2152772DC00B06805 /* WFTFirstViewController.h */ = {isa = PBXFileReference; path = WFTFirstViewController.h; sourceTree = "<group>"; };
+		E74A0CA2152772DC00B06805 /* WFTFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFTFirstViewController.h; sourceTree = "<group>"; };
 		E74A0CA3152772DC00B06805 /* WFTFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFTFirstViewController.m; sourceTree = "<group>"; };
 		E74A0CA5152772DC00B06805 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		E74A0CA7152772DC00B06805 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		E74A0CA9152772DC00B06805 /* WFTSecondViewController.h */ = {isa = PBXFileReference; path = WFTSecondViewController.h; sourceTree = "<group>"; };
-		E74A0CAA152772DC00B06805 /* WFTSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFTSecondViewController.m; sourceTree = "<group>"; };
+		E74A0CA9152772DC00B06805 /* WFTMapViewController.h */ = {isa = PBXFileReference; path = WFTMapViewController.h; sourceTree = "<group>"; };
+		E74A0CAA152772DC00B06805 /* WFTMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFTMapViewController.m; sourceTree = "<group>"; };
 		E74A0CAC152772DC00B06805 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		E74A0CAE152772DC00B06805 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		E74A0CB5152772DC00B06805 /* TrackerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74A0CB6152772DC00B06805 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E74A0CBE152772DC00B06805 /* TrackerTests-Info.plist */ = {isa = PBXFileReference; path = "TrackerTests-Info.plist"; sourceTree = "<group>"; };
+		E74A0CBE152772DC00B06805 /* TrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrackerTests-Info.plist"; sourceTree = "<group>"; };
 		E74A0CC0152772DC00B06805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E74A0CC2152772DC00B06805 /* TrackerTests.h */ = {isa = PBXFileReference; path = TrackerTests.h; sourceTree = "<group>"; };
+		E74A0CC2152772DC00B06805 /* TrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackerTests.h; sourceTree = "<group>"; };
 		E74A0CC3152772DC00B06805 /* TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerTests.m; sourceTree = "<group>"; };
+		E74A0CD11527750600B06805 /* WFTLocate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFTLocate.h; sourceTree = "<group>"; };
+		E74A0CD21527750600B06805 /* WFTLocate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFTLocate.m; sourceTree = "<group>"; };
+		E74A0CD41527753800B06805 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E74A0CD61527753E00B06805 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		E74A0CD815277BEF00B06805 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E74A0CDC15277DEC00B06805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E74A0CDE15277DEC00B06805 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		E74A0CE015277DEC00B06805 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		E74A0CE115277DEC00B06805 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		E74A0CE215277DEC00B06805 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		E74A0CE315277DEC00B06805 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E74A0CE415277DEC00B06805 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		E74A0CE515277DEC00B06805 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		E74A0CE615277DEC00B06805 /* Tracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tracker-Info.plist"; sourceTree = "<group>"; };
+		E74A0CE715277DEC00B06805 /* Tracker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tracker-Prefix.pch"; sourceTree = "<group>"; };
+		E74A0CE815277DEC00B06805 /* WFTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFTAppDelegate.h; sourceTree = "<group>"; };
+		E74A0CE915277DEC00B06805 /* WFTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFTAppDelegate.m; sourceTree = "<group>"; };
+		E74A0CEA15277DEC00B06805 /* WFTFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFTFirstViewController.h; sourceTree = "<group>"; };
+		E74A0CEB15277DEC00B06805 /* WFTFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFTFirstViewController.m; sourceTree = "<group>"; };
+		E74A0CEC15277DEC00B06805 /* WFTLocate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFTLocate.h; sourceTree = "<group>"; };
+		E74A0CED15277DEC00B06805 /* WFTLocate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFTLocate.m; sourceTree = "<group>"; };
+		E74A0CEE15277DEC00B06805 /* WFTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFTMapViewController.h; sourceTree = "<group>"; };
+		E74A0CEF15277DEC00B06805 /* WFTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFTMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74A0CD915277BEF00B06805 /* MapKit.framework in Frameworks */,
+				E74A0CD71527753E00B06805 /* Twitter.framework in Frameworks */,
+				E74A0CD51527753800B06805 /* CoreLocation.framework in Frameworks */,
 				E74A0C8B152772DB00B06805 /* UIKit.framework in Frameworks */,
 				E74A0C8D152772DB00B06805 /* Foundation.framework in Frameworks */,
 				E74A0C8F152772DB00B06805 /* CoreGraphics.framework in Frameworks */,
@@ -94,6 +137,7 @@
 		E74A0C7B152772DB00B06805 = {
 			isa = PBXGroup;
 			children = (
+				E74A0CDA15277DEC00B06805 /* Tracker */,
 				E74A0C90152772DB00B06805 /* Tracker */,
 				E74A0CBC152772DC00B06805 /* TrackerTests */,
 				E74A0C89152772DB00B06805 /* Frameworks */,
@@ -113,6 +157,9 @@
 		E74A0C89152772DB00B06805 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E74A0CD815277BEF00B06805 /* MapKit.framework */,
+				E74A0CD61527753E00B06805 /* Twitter.framework */,
+				E74A0CD41527753800B06805 /* CoreLocation.framework */,
 				E74A0C8A152772DB00B06805 /* UIKit.framework */,
 				E74A0C8C152772DB00B06805 /* Foundation.framework */,
 				E74A0C8E152772DB00B06805 /* CoreGraphics.framework */,
@@ -124,18 +171,12 @@
 		E74A0C90152772DB00B06805 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				E74A0CD0152774E500B06805 /* Classes */,
 				E74A0C99152772DB00B06805 /* WFTAppDelegate.h */,
 				E74A0C9A152772DC00B06805 /* WFTAppDelegate.m */,
-				E74A0C9C152772DC00B06805 /* MainStoryboard_iPhone.storyboard */,
-				E74A0C9F152772DC00B06805 /* MainStoryboard_iPad.storyboard */,
-				E74A0CA2152772DC00B06805 /* WFTFirstViewController.h */,
-				E74A0CA3152772DC00B06805 /* WFTFirstViewController.m */,
-				E74A0CA5152772DC00B06805 /* first.png */,
-				E74A0CA7152772DC00B06805 /* first@2x.png */,
-				E74A0CA9152772DC00B06805 /* WFTSecondViewController.h */,
-				E74A0CAA152772DC00B06805 /* WFTSecondViewController.m */,
-				E74A0CAC152772DC00B06805 /* second.png */,
-				E74A0CAE152772DC00B06805 /* second@2x.png */,
+				E74A0CCE1527733600B06805 /* Storyboards */,
+				E74A0CCF152773E600B06805 /* View Controllers */,
+				E74A0CCD1527731400B06805 /* Images */,
 				E74A0C91152772DB00B06805 /* Supporting Files */,
 			);
 			path = Tracker;
@@ -169,6 +210,71 @@
 				E74A0CBF152772DC00B06805 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E74A0CCD1527731400B06805 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E74A0CA5152772DC00B06805 /* first.png */,
+				E74A0CA7152772DC00B06805 /* first@2x.png */,
+				E74A0CAC152772DC00B06805 /* second.png */,
+				E74A0CAE152772DC00B06805 /* second@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E74A0CCE1527733600B06805 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E74A0C9C152772DC00B06805 /* MainStoryboard_iPhone.storyboard */,
+				E74A0C9F152772DC00B06805 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		E74A0CCF152773E600B06805 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A0CA2152772DC00B06805 /* WFTFirstViewController.h */,
+				E74A0CA3152772DC00B06805 /* WFTFirstViewController.m */,
+				E74A0CA9152772DC00B06805 /* WFTMapViewController.h */,
+				E74A0CAA152772DC00B06805 /* WFTMapViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E74A0CD0152774E500B06805 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E74A0CD11527750600B06805 /* WFTLocate.h */,
+				E74A0CD21527750600B06805 /* WFTLocate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E74A0CDA15277DEC00B06805 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				E74A0CDB15277DEC00B06805 /* InfoPlist.strings */,
+				E74A0CDD15277DEC00B06805 /* MainStoryboard_iPad.storyboard */,
+				E74A0CDF15277DEC00B06805 /* MainStoryboard_iPhone.storyboard */,
+				E74A0CE115277DEC00B06805 /* first.png */,
+				E74A0CE215277DEC00B06805 /* first@2x.png */,
+				E74A0CE315277DEC00B06805 /* main.m */,
+				E74A0CE415277DEC00B06805 /* second.png */,
+				E74A0CE515277DEC00B06805 /* second@2x.png */,
+				E74A0CE615277DEC00B06805 /* Tracker-Info.plist */,
+				E74A0CE715277DEC00B06805 /* Tracker-Prefix.pch */,
+				E74A0CE815277DEC00B06805 /* WFTAppDelegate.h */,
+				E74A0CE915277DEC00B06805 /* WFTAppDelegate.m */,
+				E74A0CEA15277DEC00B06805 /* WFTFirstViewController.h */,
+				E74A0CEB15277DEC00B06805 /* WFTFirstViewController.m */,
+				E74A0CEC15277DEC00B06805 /* WFTLocate.h */,
+				E74A0CED15277DEC00B06805 /* WFTLocate.m */,
+				E74A0CEE15277DEC00B06805 /* WFTMapViewController.h */,
+				E74A0CEF15277DEC00B06805 /* WFTMapViewController.m */,
+			);
+			path = Tracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +355,14 @@
 				E74A0CA8152772DC00B06805 /* first@2x.png in Resources */,
 				E74A0CAD152772DC00B06805 /* second.png in Resources */,
 				E74A0CAF152772DC00B06805 /* second@2x.png in Resources */,
+				E74A0CF015277DEC00B06805 /* InfoPlist.strings in Resources */,
+				E74A0CF115277DEC00B06805 /* MainStoryboard_iPad.storyboard in Resources */,
+				E74A0CF215277DEC00B06805 /* MainStoryboard_iPhone.storyboard in Resources */,
+				E74A0CF315277DEC00B06805 /* first.png in Resources */,
+				E74A0CF415277DEC00B06805 /* first@2x.png in Resources */,
+				E74A0CF615277DEC00B06805 /* second.png in Resources */,
+				E74A0CF715277DEC00B06805 /* second@2x.png in Resources */,
+				E74A0CF815277DEC00B06805 /* Tracker-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +400,13 @@
 				E74A0C97152772DB00B06805 /* main.m in Sources */,
 				E74A0C9B152772DC00B06805 /* WFTAppDelegate.m in Sources */,
 				E74A0CA4152772DC00B06805 /* WFTFirstViewController.m in Sources */,
-				E74A0CAB152772DC00B06805 /* WFTSecondViewController.m in Sources */,
+				E74A0CAB152772DC00B06805 /* WFTMapViewController.m in Sources */,
+				E74A0CD31527750600B06805 /* WFTLocate.m in Sources */,
+				E74A0CF515277DEC00B06805 /* main.m in Sources */,
+				E74A0CF915277DEC00B06805 /* WFTAppDelegate.m in Sources */,
+				E74A0CFA15277DEC00B06805 /* WFTFirstViewController.m in Sources */,
+				E74A0CFB15277DEC00B06805 /* WFTLocate.m in Sources */,
+				E74A0CFC15277DEC00B06805 /* WFTMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +459,30 @@
 				E74A0CC0152772DC00B06805 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E74A0CDB15277DEC00B06805 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E74A0CDC15277DEC00B06805 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E74A0CDD15277DEC00B06805 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E74A0CDE15277DEC00B06805 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E74A0CDF15277DEC00B06805 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E74A0CE015277DEC00B06805 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -398,6 +542,7 @@
 				GCC_PREFIX_HEADER = "Tracker/Tracker-Prefix.pch";
 				INFOPLIST_FILE = "Tracker/Tracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,6 +554,7 @@
 				GCC_PREFIX_HEADER = "Tracker/Tracker-Prefix.pch";
 				INFOPLIST_FILE = "Tracker/Tracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

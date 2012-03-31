@@ -1,26 +1,23 @@
 //
-//  WFTFirstViewController.m
+//  WFTSecondViewController.m
 //  Tracker
 //
 //  Created by Mike Mayer on 3/31/12.
-//  Copyright (c) 2012 wildfiretracker.com. All rights reserved.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "WFTFirstViewController.h"
+#import "WFTMapViewController.h"
 
-
-@interface WFTFirstViewController ()
+@interface WFTMapViewController ()
 
 @end
 
-@implementation WFTFirstViewController
+@implementation WFTMapViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-
-    
+	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload

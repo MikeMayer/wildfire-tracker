@@ -3,7 +3,7 @@
 //  TrackerTests
 //
 //  Created by Mike Mayer on 3/31/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 wildfiretracker.com. All rights reserved.
 //
 
 #import "TrackerTests.h"

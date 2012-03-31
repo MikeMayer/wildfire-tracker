@@ -3,18 +3,25 @@
 //  Tracker
 //
 //  Created by Mike Mayer on 3/31/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 wildfiretracker.com. All rights reserved.
 //
 
 #import "WFTAppDelegate.h"
+#import "WFTLocate.h"
 
 @implementation WFTAppDelegate
 
-@synthesize window = _window;
+@synthesize window = _window, tabBarController = _tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    //check if user has location services enabled or not
+    [WFTLocate willAllowLocation:self];
+    
+    
+    
     return YES;
 }
 							
@@ -33,6 +40,10 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    //check if user has location services enabled or not
+    //check again in case the user 
+    [WFTLocate willAllowLocation:self];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

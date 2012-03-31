@@ -1,13 +1,13 @@
 //
-//  TrackerTests.h
-//  TrackerTests
+//  WFTSecondViewController.h
+//  Tracker
 //
 //  Created by Mike Mayer on 3/31/12.
 //  Copyright (c) 2012 wildfiretracker.com. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <UIKit/UIKit.h>
 
-@interface TrackerTests : SenTestCase
+@interface WFTMapViewController : UIViewController
 
 @end
