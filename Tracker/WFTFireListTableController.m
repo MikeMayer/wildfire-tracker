@@ -7,12 +7,16 @@
 //
 
 #import "WFTFireListTableController.h"
+#import "WFTJSONRequest.h"
+
 
 @interface WFTFireListTableController ()
 
 @end
 
 @implementation WFTFireListTableController
+
+@synthesize fires;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,6 +31,14 @@
 {
     [super viewDidLoad];
     
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        fires = [WFTJSONRequest readPoints:self];
+    });
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -58,17 +70,70 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    
+    if (!fires)
+        return 1;
+    else 
+        return [fires count] - 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"fireListCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
-    
-    return cell;
+    if (fires)
+    {
+        WFTPoint *point = (WFTPoint*)[fires objectAtIndex:indexPath.row];
+        
+        if (point)
+        {
+            if (point.message)
+                cell.textLabel.text = point.message;
+            else {
+                cell.textLabel.text = @"No user-submitted message";
+                cell.textLabel.textColor = [UIColor lightGrayColor];
+            }
+        
+            if (point.magnitude)
+            {
+                switch ([point.magnitude intValue]) {
+                    case 0:
+                    {
+                        //fucking smoke
+                        cell.imageView.image = [UIImage imageNamed:@"Fire0"];
+                        break;
+                    }
+                    case 1:
+                    {   //fucking smoke and a little fire
+                        cell.imageView.image = [UIImage imageNamed:@"Fire1"];
+                        break;
+                    }
+                    case 2:
+                    {
+                        //fucking smoke and more fire
+                        cell.imageView.image = [UIImage imageNamed:@"Fire2"];
+                        break;
+                    }
+                    case 3:
+                    {
+                        //holy fuck the world is ending
+                        cell.imageView.image = [UIImage imageNamed:@"Fire3"];
+                        break;
+                    }
+                        
+                    default:
+                        NSLog(@"Buggy shitfuck");
+                        break;
+                }
+            }
+        }
+    }
+
+    if (cell)
+        return cell;
+    else
+        return [[UITableViewCell alloc] init];
 }
 
 /*

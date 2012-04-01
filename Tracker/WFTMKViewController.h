@@ -11,7 +11,13 @@
 
 
 @interface WFTMKViewController : UIViewController
+{
+    bool hasShown;
+}
 
+
+@property (nonatomic) bool hasShown;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)loadLocations:(id)sender;
 
 @end

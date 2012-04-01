@@ -23,7 +23,6 @@
     
     
     //statusbar
-    
     [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackOpaque];
     
     //register for notifications
@@ -37,7 +36,7 @@
     [TestFlight takeOff:@"34d8833f43150ab67fb7593bddb5a90e_MTM5ODI"];
     
     //globally change color of uinavigationbar
-    [[UINavigationBar appearance] setTintColor:UIColorFromRGB(0xE89235)];
+    [[UINavigationBar appearance] setTintColor:UIColorFromRGB(0x666666)];
 
     
     return YES;

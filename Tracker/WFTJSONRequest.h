@@ -10,4 +10,7 @@
 
 @interface WFTJSONRequest : NSObject
 
+
++(NSArray*) readPoints:(id)sender;
+
 @end

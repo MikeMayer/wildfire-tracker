@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WFTPoint.h"
 
 @interface WFTFireListTableController : UITableViewController
 {
+    NSArray *fires;
 }
 
+@property NSArray *fires;
 
 @end

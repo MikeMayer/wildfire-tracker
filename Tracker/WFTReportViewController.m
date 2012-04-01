@@ -7,6 +7,8 @@
 //
 
 #import "WFTReportViewController.h"
+#import "WFTSubmitReportFinalViewController.h"
+
 
 @interface WFTReportViewController ()
 
@@ -23,6 +25,7 @@
 @synthesize activityIndicatorView;
 @synthesize imageOne;
 @synthesize imageTwo;
+@synthesize imageThree;
 @synthesize cameraButton;
 @synthesize locationManager = _locationManager;
 @synthesize currentLocation, currentHeading, geoCoder;
@@ -61,11 +64,13 @@
         currentLocationLabel.text = @"Cannot find location.";
     }
     
-    estimatedDistanceSliderLabel.text = @"0.5 miles";
+    estimatedDistanceSliderLabel.text = @"100 yards";
     
     //corner radius
     imageOne.layer.cornerRadius = 4.0;
     imageTwo.layer.cornerRadius = 4.0;
+    imageThree.layer.cornerRadius = 4.0;
+
 
 }
 
@@ -81,6 +86,7 @@
     [self setImageOne:nil];
     [self setImageTwo:nil];
     [self setCameraButton:nil];
+    [self setImageThree:nil];
     [super viewDidUnload];
 }
 
@@ -133,15 +139,7 @@
 
     [self presentViewController:imagePicker 
                        animated:YES 
-                     completion:^(void)
-     {
-         
-
-        
-         
-     
-         
-     }];
+                     completion:nil];
     
 }
 
@@ -149,38 +147,18 @@
 
 - (IBAction)distanceSliderValueChanged:(id)sender {
     estimatedDistanceSliderLabel.text = 
-        [NSString stringWithFormat:@"%1.1f miles",  estimatedDistanceSlider.value];
+        [NSString stringWithFormat:@"%1.1f yards",  estimatedDistanceSlider.value];
 }
 
 - (IBAction)magnitudeValueChanged:(id)sender {
 }
 
-- (IBAction)willSubmitReport: (id)sender {
-    TWTweetComposeViewController *twitter = [[TWTweetComposeViewController alloc] init];
-        
-    if (imageOne)
-        [twitter addImage:imageOne.image];
+- (IBAction)willSubmitReport: (id)sender 
+{
+    WFTSubmitReportFinalViewController *report = [[WFTSubmitReportFinalViewController alloc] init];
     
-    if (imageTwo)
-        [twitter addImage:imageTwo.image];
-
-    [twitter setInitialText:@"I'm submitting a #wildfire"];
     
-    [self presentModalViewController:twitter animated:YES];
-    
-    twitter.completionHandler = ^(TWTweetComposeViewControllerResult result) 
-    {        
-        if (result == TWTweetComposeViewControllerResultCancelled)
-        {
-            NSLog(@"Tweet compostion was canceled.");
-        }
-        else if (result == TWTweetComposeViewControllerResultDone)
-            NSLog(@"Tweet composition completed.");
-        
-        // Dismiss the controller
-        [self dismissModalViewControllerAnimated:YES];
-    };
-    
+    [self presentModalViewController:report animated:YES];
 }
 
 
@@ -262,7 +240,15 @@
             
             [self dismissModalViewControllerAnimated:YES];
             return;
-        }
+        } else 
+            if (self.imageThree.image == nil)
+            {
+                self.imageThree = [[UIImageView alloc] initWithImage:pictureTaken];
+                
+                [self dismissModalViewControllerAnimated:YES];
+                return;
+            }
+    
     
     
     NSLog(@"Too many images taken by the user.");

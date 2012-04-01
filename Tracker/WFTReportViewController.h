@@ -34,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @property (strong, nonatomic) IBOutlet UIImageView *imageOne;
 @property (strong, nonatomic) IBOutlet UIImageView *imageTwo;
+@property (strong, nonatomic) IBOutlet UIImageView *imageThree;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 
 //methods

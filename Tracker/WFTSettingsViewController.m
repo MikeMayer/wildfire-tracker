@@ -57,17 +57,29 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
     
-    // Configure the cell...
-    
-    return cell;
+    switch(indexPath.row)
+    {
+        case 0:
+        {
+            static NSString *CellIdentifier = @"initCell";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            return cell;
+        }
+        case 1:
+        {
+            static NSString *CellIdentifier = @"secondCell";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            return cell;
+        }
+    }
+    return nil;    
 }
 
 /*
