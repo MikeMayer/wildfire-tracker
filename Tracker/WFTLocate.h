@@ -23,5 +23,6 @@
 
 //static methods
 +(bool) willAllowLocation :(id)sender;
++(CLAuthorizationStatus) getAuthorizationStatus:(id)sender;
 
 @end

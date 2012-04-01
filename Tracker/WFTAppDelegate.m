@@ -13,14 +13,32 @@
 
 @synthesize window = _window, tabBarController = _tabBarController;
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    
+{   
     //check if user has location services enabled or not
     [WFTLocate willAllowLocation:self];
     
     
+    //statusbar
+    
+    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackOpaque];
+    
+    //register for notifications
+    [[UIApplication sharedApplication] 
+     registerForRemoteNotificationTypes:( 
+                                         UIRemoteNotificationTypeBadge | 
+                                         UIRemoteNotificationTypeSound | 
+                                         UIRemoteNotificationTypeAlert)];
+    
+    //Load TestFlight
+    [TestFlight takeOff:@"34d8833f43150ab67fb7593bddb5a90e_MTM5ODI"];
+    
+    //globally change color of uinavigationbar
+    [[UINavigationBar appearance] setTintColor:UIColorFromRGB(0xE89235)];
+
     
     return YES;
 }

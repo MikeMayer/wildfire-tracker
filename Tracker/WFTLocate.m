@@ -44,5 +44,11 @@
     return true;
 }
 
++(CLAuthorizationStatus) getAuthorizationStatus:(id)sender
+{
+    return [CLLocationManager authorizationStatus];
+}
+
+
 
 @end
