@@ -82,6 +82,7 @@
                                         forKeyPath:@"location"  
                                            options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld)  
                                            context:NULL];
+            
         }
 }
 @end
