@@ -1,0 +1,5 @@
+*incomplete and not functional and rather awful*
+ 
+ `WildfireTracker` was born out of the need for information on where wildfires are burning and whether local residents are currently at imminent risk. When should you evacuate, when does the situation call for a “pack and hold” situation, and when are you okay to stay where you are? These are questions that are usually only answered after driving to local lookout locations to see where the wildfires are burning.
+ Nighttime is traditionally the worse time during fire season; the TV news stops reporting on the status of the fires and there is a lack of any credible information for four to five hours. Residents take turns driving local roads looking for the fire’s boundaries, and reporting back to their neighbors in sleepless shifts.
+ Creating WildfireTracker is our way of harnessing the strength of the local community to improve the available emergency information. By using your smartphone to take a photo of a fire, we can map the location of a wildfire and keep the community up to date on where it is and where it’s headed, allowing residents to make more informed decisions on their evacuations.
